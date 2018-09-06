@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=1]
 
-[ext_resource path="res://steering.gd" type="Script" id=1]
+[ext_resource path="res://Steering.gd" type="Script" id=1]
 [ext_resource path="res://F5S4.png" type="Texture" id=2]
 
 [node name="SteeringCharacter" type="KinematicBody2D"]

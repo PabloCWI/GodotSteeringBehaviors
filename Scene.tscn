@@ -1,0 +1,128 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://Ship_01.tscn" type="PackedScene" id=1]
+
+[node name="Scene" type="Node"]
+
+[node name="SteeringCharacter" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 491.095, 331.489 )
+
+[node name="Panel" type="Panel" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 210.0
+margin/bottom = 119.0
+
+[node name="ButtonGroup" type="ButtonGroup" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 2.0
+margin/top = 36.0
+margin/right = 208.0
+margin/bottom = 124.0
+alignment = 0
+
+[node name="Seek" type="Button" parent="ButtonGroup"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 206.0
+margin/bottom = 20.0
+toggle_mode = true
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+text = "Seek"
+flat = false
+
+[node name="Seek + Arrive" type="Button" parent="ButtonGroup"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 20.0
+margin/right = 206.0
+margin/bottom = 40.0
+toggle_mode = true
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+text = "Seek + Arrive"
+flat = false
+
+[node name="Flee" type="Button" parent="ButtonGroup"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 40.0
+margin/right = 206.0
+margin/bottom = 60.0
+toggle_mode = true
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+text = "Flee"
+flat = false
+
+[node name="Flee + Limit" type="Button" parent="ButtonGroup"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 60.0
+margin/right = 206.0
+margin/bottom = 80.0
+toggle_mode = true
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+text = "Flee + Limit"
+flat = false
+
+[node name="Label" type="Label" parent="."]
+
+rect/scale = Vector2( 1.5, 1.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 3.0
+margin/top = 2.0
+margin/right = 140.0
+margin/bottom = 23.0
+text = "Steer Modes"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[connection signal="pressed" from="ButtonGroup/Seek" to="SteeringCharacter" method="_on_Seek_pressed"]
+
+[connection signal="pressed" from="ButtonGroup/Seek + Arrive" to="SteeringCharacter" method="_on_Seek__Arrive_pressed"]
+
+[connection signal="pressed" from="ButtonGroup/Flee" to="SteeringCharacter" method="_on_Flee_pressed"]
+
+[connection signal="pressed" from="ButtonGroup/Flee + Limit" to="SteeringCharacter" method="_on_Flee__Limit_pressed"]
+
+
