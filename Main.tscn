@@ -5,12 +5,13 @@
 
 [node name="SteeringCharacter" type="KinematicBody2D"]
 
+transform/pos = Vector2( 532.964, 304.709 )
 input/pickable = false
 collision/layers = 1
 collision/mask = 1
 collision/margin = 0.08
 script/script = ExtResource( 1 )
-mode = 0
+mode = 1
 
 [node name="Sprite" type="Sprite" parent="."]
 
